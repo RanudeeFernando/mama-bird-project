@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Mother’s Day, Mama Bird!</title>
+  <link rel="icon" href="assets/svg/1.svg" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="slide" id="slide1">
+    <img src="assets/svg/10.svg" alt="Mama Bird" class="bird-img" />
+    <h1>Happy Mother’s Day, Mama Bird!</h1>
+    <p class="starting-caption">Your love is the nest where we’ve always felt safe, warm, and free to dream.<br />
+    Today, we celebrate you — the heart of our little flock.</p>
+    <button onclick="goToSlide(2)">Click here for a surprise!</button>
+  </section>
+
+  <section class="slide" id="slide2">
+    <div class="slideshow-container">
+      <img src="assets/images/mama1.jpg" class="slide-img" />
+      <img src="assets/images/mama2.jpg" class="slide-img" />
+      <img src="assets/images/mama3.jpg" class="slide-img" />
+      <img src="assets/images/mama4.jpg" class="slide-img" />
+    </div>
+    <p class="slideshow-caption">A few of our favorite memories together — moments I’ll cherish forever.</p>
+    <button onclick="goToSlide(3)">Next</button>
+  </section>
+
+  <section class="slide" id="slide3">
+    <img src="assets/svg/12.svg" alt="Mama Bird" class="bird-img" />
+    <h2>Why We Love You ‪‪❤︎‬</h2>
+    <button onclick="showReason()">Tell Me</button>
+      <p id="reasonText"></p>
+    <button onclick="goToSlide(4)">Next</button>
+  </section>
+
+  <section class="slide" id="slide4">
+    <img src="assets/svg/8.svg" alt="Mama Bird" class="bird-img" />
+    <blockquote>“We’ll always fly back to you.”</blockquote>
+    <p class="final">You’re the reason I know what unconditional love truly means.</p>
+    <p class="final"><i>Love, Ranudee & Thevan</i></p>
+  </section>
+
+  <div class="heart-rain">
+    <img src="assets/svg/11.svg" class="heart" />
+    <img src="assets/svg/11.svg" class="heart" />
+    <img src="assets/svg/11.svg" class="heart" />
+    <img src="assets/svg/11.svg" class="heart" />
+    <img src="assets/svg/11.svg" class="heart" />
+  </div>
+
+  <div id="popupHeartOverlay"></div>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" src="assets/audio/mothers_love1.mp3" autoplay loop></audio>
+
+  <!-- Music Toggle Button -->
+  <button id="musicToggle" class="music-btn" title="Toggle Music">🔈</button>
+
+  <script src="script.js"></script>
+  <script>
+    
+  </script>
+</body>
+</html>

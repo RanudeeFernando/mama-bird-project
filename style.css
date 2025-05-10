@@ -1,0 +1,253 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff0f5;
+  color: #4e3d42;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+h1, h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #d81b60;
+}
+
+.starting-caption {
+  font-size: 1.3rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #f48fb1;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ec407a;
+}
+
+.slideshow-container {
+  width: 80%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.slide-img.active {
+  opacity: 1;
+}
+
+#reasonText {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+blockquote {
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #6d4c41;
+  margin-bottom: 1rem;
+}
+
+.final {
+  font-size: 1.3rem;
+  color: #4e3d42;
+}
+
+.bird-img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  width: 500px;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.heart-rain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  top: -10%;
+  width: 150px;
+  animation: fall linear infinite;
+  opacity: 0.8;
+}
+
+.heart:nth-child(1) {
+  left: 10%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+.heart:nth-child(2) {
+  left: 25%;
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+.heart:nth-child(3) {
+  left: 50%;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+.heart:nth-child(4) {
+  left: 70%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+.heart:nth-child(5) {
+  left: 85%;
+  animation-duration: 6s;
+  animation-delay: 1.5s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.slideshow-caption {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #6d4c41;
+}
+
+.music-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #f48fb1;
+  border: none;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+
+.popup-heart-wrapper {
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  max-width: 800px;
+  height: auto;
+  animation: floatCombined 5s ease forwards;
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.popup-heart-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.popup-heart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  color: #4e3d42;
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  pointer-events: none;
+}
+
+@keyframes floatCombined {
+  0% {
+    transform: translate(-50%, 80%) scale(0.4);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -100%) scale(0.95);
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOutSmooth 0.6s ease forwards !important;
+}
+
+@keyframes fadeOutSmooth {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -70%) scale(0.95);
+  }
+}
+
+
+
+
