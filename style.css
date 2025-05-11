@@ -91,7 +91,9 @@ blockquote {
 .bird-img {
   display: block;
   margin: 0 auto 0.5rem auto;
-  width: 500px;
+  width: clamp(200px, 50vw, 500px);    /* responsive to screen size */
+  max-width: 500px;      /* doesn't grow too large on big screens */
+  height: auto;
   animation: float 3s ease-in-out infinite;
 }
 
@@ -118,7 +120,9 @@ blockquote {
 .heart {
   position: absolute;
   top: -10%;
-  width: 150px;
+  width: 10vw;          /* responsive to screen width */
+  max-width: 150px;     /* never gets larger than original */
+  height: auto;
   animation: fall linear infinite;
   opacity: 0.8;
 }
@@ -193,6 +197,7 @@ blockquote {
   width: 80vw;
   max-width: 800px;
   height: auto;
+  max-height: 80vh;
   animation: floatCombined 5s ease forwards;
   z-index: 1000;
   pointer-events: none;
@@ -211,7 +216,7 @@ blockquote {
   width: 60%;
   transform: translate(-50%, -50%);
   color: #4e3d42;
-  font-size: 1.5rem;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.5;
